@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<dao xmlns="http://jelix.org/ns/dao/1.0">
+    <datasources>
+        <primarytable name="news" realname="news" primarykey="news_id" />
+    </datasources>
+    <record>
+        <property name="news_id" fieldname="news_id" datatype="autoincrement"/>
+        <property name="title" fieldname="title" datatype="varchar" maxlength="150" required="yes"/>
+        <property name="url" fieldname="url" datatype="varchar" maxlength="150" required="yes"/>
+        <property name="abstract" fieldname="abstract" datatype="text"/>
+        <property name="content" fieldname="content" datatype="text" required="yes"/>
+        <property name="date_create" fieldname="date_create" datatype="datetime" required="yes"/>
+        <property name="lang" fieldname="lang" datatype="varchar" maxlength="5" required="yes"/>
+        <property name="author" fieldname="author" datatype="varchar" maxlength="50" />
+    </record>
+    <factory>
+        <method name="getFirstByLang" type="selectfirst">
+            <parameter name="lang" />
+            <conditions logic="and">
+                <eq property="lang" expr="$lang" />
+            </conditions>
+            <order>
+                <orderitem property="date_create" way="DESC" />
+            </order>
+        </method>
+        <method name="findAllByLang" type="select">
+            <parameter name="lang" />
+            <conditions logic="and">
+                <eq property="lang" expr="$lang" />
+            </conditions>
+            <order>
+                <orderitem property="date_create" way="DESC" />
+            </order>
+        </method>
+        <method name="getByUrlId" type="selectfirst">
+            <parameter name="url" />
+            <conditions>
+                <eq property="url" expr="$url" />
+            </conditions>
+        </method>
+     </factory>
+</dao>

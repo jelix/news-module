@@ -1,0 +1,27 @@
+{
+    "name": "jelix/news-module",
+    "type": "jelix-module",
+    "description": "A simple module to display some news",
+    "keywords": ["module", "jelix", "news"],
+    "homepage": "http://jelix.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laurent Jouanneau",
+            "email": "laurent@jelix.org"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "jelix/jelix": "dev-jelix-1.7.x"
+    },
+    "minimum-stability": "stable",
+    "extra" : {
+        "jelix" : {
+            "modules": [
+                "news"
+            ]
+        }
+    }
+}

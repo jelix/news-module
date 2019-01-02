@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<suburls xmlns="http://jelix.org/ns/suburls/1.0">
+    <url pathinfo="/en/" action="default:index" optionalTrailingSlash="true">
+        <static name="lang" value="en_EN" />
+    </url>
+    <url pathinfo="/en/rss" action="default:rss">
+        <static name="lang" value="en_EN" />
+    </url>
+    <url pathinfo="/en/post/:newsid" action="default:article">
+        <static name="lang" value="en_EN" />
+        <param name="newsid" />
+    </url>
+
+    <url pathinfo="/fr/" action="default:index" optionalTrailingSlash="true">
+        <static name="lang" value="fr_FR" />
+    </url>
+    <url pathinfo="/fr/rss"  action="default:rss">
+        <static name="lang" value="fr_FR" />
+    </url>
+    <url pathinfo="/fr/post/:newsid" action="default:article">
+        <static name="lang" value="fr_FR" />
+        <param name="newsid" />
+    </url>
+</suburls>
