@@ -2,7 +2,7 @@
 <div class="content-box" id="article">
     <h2>{@news~news.page_title@}</h2>
 
-<div class="news">
+<article class="news">
 
 {if $news}
     <h3>{$news->title}</h3>
@@ -11,6 +11,6 @@
 {else}
     <p>{@news~news.unknown@}</p>
 {/if}
-</div>
+</article>
 
 </div>
