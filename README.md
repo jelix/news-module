@@ -32,10 +32,10 @@ As an application user
 Retrieve the package, and copy the news directory into the modules/ or
 extra-modules/ directory of the application.
 
-Then execute on the commande line, this command to configure the module:
+Then execute on the command line, this command to configure the module:
 
 ```bash
-php yourapp/install/configure.php news
+php yourapp/install/configurator.php news
 ```
 
 And then launch the installer to activate the module
