@@ -11,7 +11,16 @@ htmllogin="\Jelix\AdminUI\Responses\AdminUIBareResponse"
 
 [coordplugins]
 jacl2=1
+sessionauth=on
+
 [coordplugin_jacl2]
 on_error=2
 error_message="jacl2~errors.action.right.needed"
 on_error_action="jelix~error:badright"
+
+[tplplugins]
+defaultJformsBuilder=adminlte
+
+[sessionauth]
+missingAuthAction="authcore~sign:in"
+authRequired=on

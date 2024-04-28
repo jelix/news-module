@@ -15,19 +15,21 @@ theme=default
 jelix.enabled=on
 jelix.installparam[wwwfiles]=vhost
 
-;jacl2.enabled=on
-;jacl2.installparam[eps]="[index,admin]"
-
-;jacl2db.enabled=on
-;jacl2db.installparam[defaultuser]=on
-;jacl2db.installparam[defaultgroups]=on
-
 test.enabled=on
 news.enabled=on
 jfeeds.enabled=on
 
 adminui.enabled=on
 adminui.installparam[wwwfiles]=vhost
+
+authcore.enabled=on
+
+jacl2.enabled=on
+jacl2.installparam[eps]="[admin]"
+jacl2db.enabled=on
+jacl2db.installparam[defaultuser]=on
+jacl2db.installparam[defaultgroups]=on
+authloginpass.enabled=on
 
 [coordplugins]
 
@@ -90,7 +92,7 @@ email="root@localhost"
 driver=db
 hiddenRights=
 hideRights=false
-authAdapterClass=jAcl2JAuthAdapter
+authAdapterClass="\Jelix\Authentication\Core\Acl2Adapter"
 
 [webassets_common]
 jquery.js="adminlte-assets/plugins/jquery/jquery.js"
@@ -157,3 +159,28 @@ sidebar.current-item.color=primary
 footer.fixed=off
 footer.smalltext=off
 body.smalltext=off
+
+[authentication]
+idp[]=loginpass
+sessionHandler=php
+
+[sessionauth]
+missingAuthAction="authcore~sign:in"
+missingAuthAjaxAction=
+authRequired=off
+
+[loginpass_idp]
+backends[]=dbdao
+afterLogin="adminui~default:index"
+
+[loginpass:common]
+passwordHashAlgo=1
+passwordHashOptions=
+deprecatedPasswordCryptFunction=
+deprecatedPasswordSalt=
+
+[loginpass:dbdao]
+backendType=dbdao
+profile=default
+dao="authloginpass~user"
+sessionAttributes=login,email,username

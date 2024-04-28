@@ -66,6 +66,7 @@ function resetApp() {
     cleanTmp
     setRights
     launchInstaller
+    su $APP_USER -c "php $APPDIR/console.php loginpass:user:create admin admin@newsmodule.local --set-pass=admin"
 }
 
 

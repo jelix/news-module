@@ -15,7 +15,8 @@
         "jelix/jelix": "dev-jelix-1.8.x",
         "jelix/feeds-module": "~1.7.6",
         "jelix/wikirenderer-plugin": "~1.7.3",
-        "jelix/adminui-module": "^1.0"
+        "jelix/adminui-module": "^1.0",
+        "jelix/authentication-module": "0.3.x-dev"
     },
     "config": {
       "allow-plugins": {
