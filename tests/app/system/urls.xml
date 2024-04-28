@@ -7,9 +7,9 @@
     </classicentrypoint>
     <entrypoint name="admin" type="classic">
         <url pathinfo="/" module="adminui" action="default:index"/>
-        <url module="adminui" pathinfo="/adminui" include="urls.xml" />
-        <url module="authcore" pathinfo="/auth" include="urls.xml" />
+        <url module="adminui" pathinfo="/adminui" include="urls.xml"/>
+        <url module="authcore" pathinfo="/auth" include="urls.xml"/>
         <url module="authloginpass" pathinfo="/authpass" include="urls.xml"/>
-        <!--<url include="urls.xml" pathinfo="/acl" module="jacl2db_admin"/>-->
+        <url module="jacl2db_admin" pathinfo="/acl" include="urls.xml"/>
     </entrypoint>
 </urls>

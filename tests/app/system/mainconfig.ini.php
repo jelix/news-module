@@ -30,6 +30,7 @@ jacl2db.enabled=on
 jacl2db.installparam[defaultuser]=on
 jacl2db.installparam[defaultgroups]=on
 authloginpass.enabled=on
+jacl2db_admin.enabled=on
 
 [coordplugins]
 
@@ -100,8 +101,8 @@ adminlte-bootstrap.require="jquery,jquery_ui"
 adminlte-bootstrap.js[]="adminlte-assets/plugins/bootstrap/js/bootstrap.bundle.min.js"
 adminlte-fontawesome.css[]="adminlte-assets/plugins/fontawesome-free/css/all.min.css"
 adminlte.require="jquery,adminlte-bootstrap,adminlte-fontawesome"
-adminlte.css[]="adminlte-assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
 adminlte.css[]="adminlte-assets/dist/css/adminlte.min.css"
+adminlte.css[]="adminlte-assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
 adminlte.css[]="adminui-assets/SourceSansPro/SourceSansPro.css"
 adminlte.css[]="adminui-assets/adminui.css"
 adminlte.js[]="adminlte-assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"
@@ -124,6 +125,10 @@ tempusdominus.require=moment
 tempusdominus.js[]="adminlte-assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"
 tempusdominus.css[]="adminlte-assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
 
+jacl2_admin.css[]="$jelix/design/jacl2.css"
+jacl2_admin.js[]="$jelix/js/jacl2db_admin.js"
+jacl2_admin.require[]=jquery_ui
+
 [session]
 storage=
 
@@ -144,7 +149,7 @@ header.fixed=off
 header.border=on
 header.smalltext=off
 header.color=white
-header.darktext=off
+header.darktext=on
 header.brand.smalltext=off
 sidebar.collapsed=off
 sidebar.fixed=off
@@ -183,4 +188,4 @@ deprecatedPasswordSalt=
 backendType=dbdao
 profile=default
 dao="authloginpass~user"
-sessionAttributes=login,email,username
+sessionAttributes="login,email,username"
