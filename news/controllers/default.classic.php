@@ -68,6 +68,7 @@ class defaultCtrl extends jController {
         $rep->infos->title = jLocale::get('news.page_title');
         $rep->infos->webSiteUrl= jUrl::getFull('news~default:index', $link_param);
         $rep->infos->description = jLocale::get('news.description');
+
         if (isset(jApp::config()->news['copyright'])) {
             $rep->infos->copyright = jApp::config()->news['copyright'];
         }
@@ -85,11 +86,10 @@ class defaultCtrl extends jController {
             $item = $rep->createItem($news->title,$url, $news->date_create);
             $item->published = $news->date_create;
             $item->authorName = $news->author;
-            $wiki = new jWiki();
             if($news->abstract =='')
-                $item->content = $wiki->render($news->content);
+                $item->content = $news->content;
             else
-                $item->content = $wiki->render($news->abstract);
+                $item->content = $news->abstract;
             $item->contentType='html';
             $item->idIsPermalink = false;
             $rep->addItem($item);

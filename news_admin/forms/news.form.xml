@@ -16,13 +16,13 @@
 	</datetime>
 
 
-	<wikieditor ref="abstract" required="true">
+	<htmleditor ref="abstract" required="true">
 		<label locale="news_admin~news.form.summary" />
-	</wikieditor>
+	</htmleditor>
 
-	<wikieditor ref="content" required="true">
+	<htmleditor ref="content" required="true">
 		<label locale="news_admin~news.form.content" />
-	</wikieditor>
+	</htmleditor>
 
 	<menulist ref="lang" required="true">
 		<label locale="news_admin~news.form.lang" />
@@ -35,8 +35,6 @@
 
 	<submit ref="_submit">
 		<label locale="news_admin~news.form.ok" />
-		<item value="preview" locale="news_admin~news.form.ok.preview"/>
-		<item value="save" locale="news_admin~news.form.ok.save"/>
 	</submit>
 
 </form>

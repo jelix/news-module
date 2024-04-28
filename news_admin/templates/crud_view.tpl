@@ -17,5 +17,5 @@
     <li><a href="{jurl $editAction, array('id'=>$id)}" class="crud-link">{@jelix~crud.link.edit.record@}</a></li>
     <li><a href="{jurl $deleteAction, array('id'=>$id)}" class="crud-link" onclick="return confirm('{@jelix~crud.confirm.deletion@}')">{@jelix~crud.link.delete.record@}</a></li>
 {/ifacl2}
-    <li><a href="{jurl $listAction, array('cat'=>$cat)}" class="crud-link">{@jelix~crud.link.return.to.list@}</a></li>
+    <li><a href="{jurl $listAction}" class="crud-link">{@jelix~crud.link.return.to.list@}</a></li>
 </ul>

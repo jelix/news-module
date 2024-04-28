@@ -10,9 +10,9 @@ title="{@news~news.permanent.link@}"># {$news->date_create|jdatetime}</a>
          {$news->author|escxml}.</div>
 
 {if $news->abstract ==''}
-    <div class="news-content">{$news->content|wiki:"wr3_to_xhtml"}</div>
+    <div class="news-content">{$news->content}</div>
 {else}
-    <div class="news-content">{$news->abstract|wiki:"wr3_to_xhtml"}</div>
+    <div class="news-content">{$news->abstract}</div>
     <p><a href="{jurl 'news~default:article', array('newsid'=>$news->slugurl, 'lang'=>$lang)}">{@news~news.full.article.label@}</a></p>
 {/if}
 </article>
