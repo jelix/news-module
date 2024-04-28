@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<urls xmlns="http://jelix.org/ns/urls/1.0">
+    <classicentrypoint name="index" default="true" optionalTrailingSlash="true">
+        <url pathinfo="/" module="test" action="default:index"/>
+        <url pathinfo="/news" module="news" include="urls.xml"/>
+        <url module="jfeeds" pathinfo="/feeds"/>
+    </classicentrypoint>
+    <!--<entrypoint name="admin" type="classic">
+        <url include="urls.xml" pathinfo="/acl" module="jacl2db_admin"/>
+    </entrypoint>-->
+</urls>

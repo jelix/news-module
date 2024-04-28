@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="http://jelix.org/ns/module/1.0">
     <info id="news@.jelix.org" name="news">
-        <version date="2019-08-23">1.0.0</version>
+        <version date="2024-04-28">2.0.0-pre</version>
         <label lang="en_US">News module</label>
         <description lang="en_US"></description>
         <license>MIT</license>
-        <copyright>2019 Laurent Jouanneau</copyright>
+        <copyright>2019-2024 Laurent Jouanneau</copyright>
     </info>
     <dependencies>
-        <jelix minversion="1.7.0-beta.5" maxversion="1.7.*"/>
+        <jelix minversion="1.7.0" maxversion="1.8.*"/>
     </dependencies>
 </module>

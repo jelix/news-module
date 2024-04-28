@@ -1,0 +1,28 @@
+{
+    "name": "jelix/newsmodule-test-app",
+    "type": "project",
+    "description": "app to test news modules",
+    "keywords": [],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Laurent Jouanneau",
+            "email": "laurent@jelix.org"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "jelix/jelix": "dev-jelix-1.8.x",
+        "jelix/feeds-module": "~1.7.6",
+        "jelix/wikirenderer-plugin": "~1.7.3"
+    },
+    "require-dev" : {
+        
+    },
+    "config": {
+      "allow-plugins": {
+        "jelix/composer-module-setup": true
+      }
+    },
+    "minimum-stability": "stable"
+}

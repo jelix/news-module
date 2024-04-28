@@ -3,7 +3,7 @@
     "type": "jelix-module",
     "description": "A simple module to display some news",
     "keywords": ["module", "jelix", "news"],
-    "homepage": "http://jelix.org",
+    "homepage": "https://jelix.org",
     "license": "MIT",
     "authors": [
         {
@@ -12,9 +12,11 @@
         }
     ],
     "require": {
+        "jelix/feeds-module": "~1.7.6",
+        "jelix/wikirenderer-plugin": "~1.7.3"
     },
     "conflict": {
-       "jelix/jelix": "<1.7.0-rc.4"
+       "jelix/jelix": "<1.7.0"
     },
     "minimum-stability": "stable",
     "extra" : {

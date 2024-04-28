@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <suburls xmlns="http://jelix.org/ns/suburls/1.0">
     <url pathinfo="/en/" action="default:index" optionalTrailingSlash="true">
-        <static name="lang" value="en_EN" />
+        <static name="lang" value="en_US" />
     </url>
     <url pathinfo="/en/rss" action="default:rss">
-        <static name="lang" value="en_EN" />
+        <static name="lang" value="en_US" />
     </url>
     <url pathinfo="/en/post/:newsid" action="default:article">
-        <static name="lang" value="en_EN" />
+        <static name="lang" value="en_US" />
         <param name="newsid" />
     </url>
 

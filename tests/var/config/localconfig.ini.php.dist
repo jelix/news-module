@@ -1,0 +1,6 @@
+
+forceHTTPPort=8024
+domainName=newsmodule.local
+
+[mailer]
+webmasterEmail = laurent@jelix.org

@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+COMMAND="$1"
+shift
+
+if [ "$COMMAND" == "" ]; then
+    echo "Error: command is missing"
+    echo "Possible commands: clean-tmp, reset, install, rights, composer-install, composer-update"
+    echo " shell, shellroot"
+    exit 1;
+fi
+
+case $COMMAND in
+    clean-tmp)
+        docker compose exec -t -i php appctl.sh clean-tmp;;
+    reset)
+        docker compose exec -t -i php appctl.sh reset;;
+    install)
+        docker compose exec -t -i php appctl.sh install;;
+    rights)
+        docker compose exec -t -i php appctl.sh rights;;
+    composer-install)
+        docker compose exec -t -i php appctl.sh composer-install;;
+    composer-update)
+        docker compose exec -t -i php appctl.sh composer-update;;
+    #unittests)
+    #    docker compose exec -t -i php appctl.sh unittests;;
+    pgsql)
+       docker compose exec -it --user postgres -e PGPASSWORD="test1234" pgsql psql --username=usertest newsmodule
+       ;;
+    shell)
+       docker compose exec -it --user userphp php  /bin/bash -l;;
+    shellroot)
+       docker compose exec -it php  /bin/bash  -l;;
+    *)
+        echo "wrong command"
+        exit 2
+        ;;
+esac
+
+

@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+basedir=$(dirname "$0")
+set -e
+
+CMD=$1
+
+
+if [ ! -f $basedir/.env ]; then
+
+  JELIX_USER_ID=${JELIX_USER_ID:-$(id -u)}
+  JELIX_GROUP_ID=${JELIX_GROUP_ID:-$(id -g)}
+
+  if [ "$TESTAPP_WEB_PORT" == "" ]; then
+    TESTAPP_WEB_PORT=8540
+  fi
+
+  if [ "$PHP_VERSION" == "" ]; then
+    PHP_VERSION=8.3
+  fi
+
+  if [ "$TESTAPP_PGSQL_PORT" == "" ]; then
+    export TESTAPP_PGSQL_PORT=8541
+  fi
+
+
+  cat <<-EOF > $basedir/.env
+JELIX_USER_ID=$JELIX_USER_ID
+JELIX_GROUP_ID=$JELIX_GROUP_ID
+TESTAPP_WEB_PORT=$TESTAPP_WEB_PORT
+TESTAPP_PGSQL_PORT=$TESTAPP_PGSQL_PORT
+PHP_VERSION=$PHP_VERSION
+EOF
+else
+  source $basedir/.env
+fi
+
+if [ "$CMD" == "reset" ]; then
+    # Stop/Remove containers
+    docker compose rm -sf || true
+    # Clean db volumes
+    docker volume rm "jelix_newsmodule_pg_data" || true
+    exit 0
+elif [ -z "$CMD" ]; then
+    CMD="up"
+else
+    shift
+fi
+
+docker compose $CMD

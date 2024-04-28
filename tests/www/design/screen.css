@@ -1,0 +1,118 @@
+
+body {  font-family: Verdana, Arial, Sans; font-size:0.8em;}
+
+a img { border:0;}
+
+
+pre {
+  padding-left:1em;
+  border-left:4px solid #efe03b;
+  color:black;
+   background-color: lightgray;
+}
+
+
+#header {
+   margin:20px auto;
+   max-width:850px;
+   padding:15px;
+   background-color:#1e92af;
+   border-radius:10px 10px 0 0;
+   color:white;
+   font-weight:bold;
+   font-size:1.5em;
+ }
+
+#main {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   align-items: stretch;
+   align-content: stretch;
+
+   margin:0 auto;
+   padding:30px 15px 15px 15px;
+   max-width: 850px;
+   color : #002830;
+   border-left:1px solid #d8e1e4;
+   border-right:1px solid #d8e1e4;
+}
+
+#main a { color:#0594c8; text-decoration:underline; }
+#main a:visited {  color : #002830;}
+#main a:hover {
+   color: white;
+   background-color: #0594c8;
+   text-decoration:none;
+}
+
+
+
+#sidemenu {
+   display: block;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   padding-left:10px;
+   border-right: 2px solid black;
+   margin-right: 2em;
+}
+
+
+#sidemenu a {color:#0594c8; text-decoration:none;}
+#sidemenu a:hover { text-decoration: underline; }
+#sidemenu h1 { text-align:center; font-size: 1.2em }
+#sidemenu h1 a {text-decoration:none;}
+#sidemenu h1 a:hover { text-decoration:none; }
+#sidemenu ul { margin:0 0 0 1em;
+   padding:0 0 0 1em;
+   color: #3c90af;
+}
+#sidemenu ul li { margin:0; padding:0 0 0 0; }
+#sidemenu .userinfo { margin:2em 0; }
+#sidemenu p { text-align:center;}
+
+
+#content {
+   display: block;
+   flex-grow: 5;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+}
+#content h1 { color: #3c90af; border-bottom:4px solid #ed5a02; margin:0; }
+#content h2 { color: #3c90af; border-bottom:2px solid #002830; margin:1em 0 0.5em 0; }
+#content h3 { color: #002830; border-bottom:1px solid #002830; margin:1em 0 0.5em 0; }
+#content h4 { color: #002830; }
+#content input[type=button] {
+   background-color:#4397b6;
+   border-left: 1px solid #99cbde;
+   border-right: 1px solid  #225365;
+   border-top: 1px solid #99cbde ;
+   border-bottom: 1px solid  #225365;
+   -moz-border-radius:3px;
+   color:white;
+   cursor: pointer;
+}
+
+
+
+
+
+#footer {
+   margin:0 auto;
+   padding:15px;
+   width:850px;
+   color : #002830;
+   text-align:center;
+   min-height:2em;
+   background-color:#d8e1e4;
+   border-left:1px solid #d8e1e4;
+   border-right:1px solid #d8e1e4;
+   border-bottom:1px solid #d8e1e4;
+   border-radius:0px 0px 15px 15px;
+}
+
+
