@@ -1,9 +1,13 @@
 ;<?php die(''); ?>
 ;for security reasons , don't remove or modify the first line
 
+
+theme=adminlte
+
 [responses]
-html=adminHtmlResponse
-htmlauth=adminLoginHtmlResponse
+html="\Jelix\AdminUI\Responses\AdminUIResponse"
+htmlerror="\Jelix\AdminUI\Responses\AdminUIResponse"
+htmllogin="\Jelix\AdminUI\Responses\AdminUIBareResponse"
 
 [coordplugins]
 jacl2=1

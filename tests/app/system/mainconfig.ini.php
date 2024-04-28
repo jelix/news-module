@@ -26,6 +26,9 @@ test.enabled=on
 news.enabled=on
 jfeeds.enabled=on
 
+adminui.enabled=on
+adminui.installparam[wwwfiles]=vhost
+
 [coordplugins]
 
 [responses]
@@ -90,7 +93,67 @@ hideRights=false
 authAdapterClass=jAcl2JAuthAdapter
 
 [webassets_common]
-
+jquery.js="adminlte-assets/plugins/jquery/jquery.js"
+adminlte-bootstrap.require="jquery,jquery_ui"
+adminlte-bootstrap.js[]="adminlte-assets/plugins/bootstrap/js/bootstrap.bundle.min.js"
+adminlte-fontawesome.css[]="adminlte-assets/plugins/fontawesome-free/css/all.min.css"
+adminlte.require="jquery,adminlte-bootstrap,adminlte-fontawesome"
+adminlte.css[]="adminlte-assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+adminlte.css[]="adminlte-assets/dist/css/adminlte.min.css"
+adminlte.css[]="adminui-assets/SourceSansPro/SourceSansPro.css"
+adminlte.css[]="adminui-assets/adminui.css"
+adminlte.js[]="adminlte-assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"
+adminlte.js[]="adminlte-assets/plugins/jquery-mousewheel/jquery.mousewheel.js"
+adminlte.js[]="adminlte-assets/plugins/fastclick/fastclick.js"
+adminlte.js[]="adminlte-assets/dist/js/adminlte.min.js"
+adminlte.js[]="adminui-assets/adminui.js"
+knob.js[]="adminlte-assets/plugins/jquery-knob/jquery.knob.min.js"
+daterangepicker.require=moment
+daterangepicker.js[]="adminlte-assets/plugins/daterangepicker/daterangepicker.js"
+daterangepicker.css[]="adminlte-assets/plugins/daterangepicker/daterangepicker.css"
+jqvmap.js[]="adminlte-assets/plugins/jqvmap/jquery.vmap.js"
+jqvmap.css[]="adminlte-assets/plugins/jqvmap/jqvmap.css"
+sparkline.js[]="adminlte-assets/plugins/sparklines/sparkline.js"
+chartjs.js[]="adminlte-assets/plugins/chart.js/Chart.min.js"
+chartjs.css[]="adminlte-assets/plugins/chart.js/Chart.css"
+summernote.js[]="adminlte-assets/plugins/summernote/summernote-bs4.min.js"
+moment.js[]="adminlte-assets/plugins/moment/moment.min.js"
+tempusdominus.require=moment
+tempusdominus.js[]="adminlte-assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"
+tempusdominus.css[]="adminlte-assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
 
 [session]
 storage=
+
+[adminui]
+appVersion=1.0.0
+appTitle=Admin
+htmlLogo="<b>Admin</b>UI"
+htmlLogoMini="<b>A</b>UI"
+htmlCopyright="<strong>Copyright &copy; 2024 Jelix.</strong>."
+dashboardTemplate=
+disableDashboardMenuItem=off
+bodyCSSClass=hold-transition
+bareBodyCSSClass="hold-transition login-page"
+adminlteAssetsUrl="adminlte-assets/"
+fullScreenModeEnabled=off
+darkmode=off
+header.fixed=off
+header.border=on
+header.smalltext=off
+header.color=white
+header.darktext=off
+header.brand.smalltext=off
+sidebar.collapsed=off
+sidebar.fixed=off
+sidebar.mini=on
+sidebar.nav.flat.style=off
+sidebar.nav.compact=off
+sidebar.nav.child.indent=off
+sidebar.nav.child.collapsed=off
+sidebar.nav.smalltext=off
+sidebar.dark=on
+sidebar.current-item.color=primary
+footer.fixed=off
+footer.smalltext=off
+body.smalltext=off

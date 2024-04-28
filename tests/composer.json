@@ -14,10 +14,8 @@
         "php": ">=8.2",
         "jelix/jelix": "dev-jelix-1.8.x",
         "jelix/feeds-module": "~1.7.6",
-        "jelix/wikirenderer-plugin": "~1.7.3"
-    },
-    "require-dev" : {
-        
+        "jelix/wikirenderer-plugin": "~1.7.3",
+        "jelix/adminui-module": "^1.0"
     },
     "config": {
       "allow-plugins": {

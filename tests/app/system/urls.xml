@@ -4,8 +4,10 @@
         <url pathinfo="/" module="test" action="default:index"/>
         <url pathinfo="/news" module="news" include="urls.xml"/>
         <url module="jfeeds" pathinfo="/feeds"/>
+        <url include="urls.xml" module="adminui" pathinfo="/adminui"/>
     </classicentrypoint>
-    <!--<entrypoint name="admin" type="classic">
-        <url include="urls.xml" pathinfo="/acl" module="jacl2db_admin"/>
-    </entrypoint>-->
+    <entrypoint name="admin" type="classic">
+        <url pathinfo="/" module="adminui" action="default:index"/>
+        <!--<url include="urls.xml" pathinfo="/acl" module="jacl2db_admin"/>-->
+    </entrypoint>
 </urls>
