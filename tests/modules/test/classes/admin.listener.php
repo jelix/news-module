@@ -31,6 +31,6 @@ class adminListener extends jEventListener
             jAuthentication::getSignoutPageUrl(),
             '#profile'
         );
-        $uim->sidebar()->addMenuItem(new JelixLinkMenuItem('Droits', 'jacl2db_admin~groups:index', null, 'user-lock'));
+        $uim->sidebar()->addMenuItem(new JelixLinkMenuItem('Rights', 'jacl2db_admin~groups:index', null, 'user-lock'));
     }
 }

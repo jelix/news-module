@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="http://jelix.org/ns/module/1.0">
+    <info id="news_admin@jelix.org" name="news_admin" createdate="2024-04-28">
+        <version>1.0.0-pre</version>
+        <label lang="en_US">Management of news</label>
+        <description lang="en_US" />
+        <license>MIT</license>
+        <copyright>2024 Laurent Jouanneau</copyright>
+        <creator name="laurent" email="laurent@jelix.org"/>
+    </info>
+    <dependencies>
+        <jelix minversion="1.7.0" maxversion="1.8.*"/>
+        <module name="news" minversion="2.0.0-pre"/>
+        <module name="jacl2db" />
+    </dependencies>
+</module>

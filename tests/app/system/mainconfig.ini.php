@@ -32,6 +32,7 @@ jacl2db.installparam[defaultgroups]=on
 authloginpass.enabled=on
 jacl2db_admin.enabled=on
 
+news_admin.enabled=on
 [coordplugins]
 
 [responses]

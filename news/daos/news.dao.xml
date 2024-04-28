@@ -5,13 +5,13 @@
     </datasources>
     <record>
         <property name="news_id" fieldname="news_id" datatype="autoincrement"/>
-        <property name="title" fieldname="title" datatype="varchar" maxlength="150" required="yes"/>
-        <property name="url" fieldname="url" datatype="varchar" maxlength="150" required="yes"/>
+        <property name="title" fieldname="title" datatype="varchar" maxlength="255" required="yes"/>
+        <property name="slugurl" fieldname="slugurl" datatype="varchar" maxlength="255" required="yes"/>
         <property name="abstract" fieldname="abstract" datatype="text"/>
         <property name="content" fieldname="content" datatype="text" required="yes"/>
         <property name="date_create" fieldname="date_create" datatype="datetime" required="yes"/>
         <property name="lang" fieldname="lang" datatype="varchar" maxlength="5" required="yes"/>
-        <property name="author" fieldname="author" datatype="varchar" maxlength="50" />
+        <property name="author" fieldname="author" datatype="varchar" maxlength="100" />
     </record>
     <factory>
         <method name="getFirstByLang" type="selectfirst">
@@ -35,7 +35,7 @@
         <method name="getByUrlId" type="selectfirst">
             <parameter name="url" />
             <conditions>
-                <eq property="url" expr="$url" />
+                <eq property="slugurl" expr="$url" />
             </conditions>
         </method>
      </factory>

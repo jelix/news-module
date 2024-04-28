@@ -81,7 +81,7 @@ class defaultCtrl extends jController {
 
         $list = $newsdao->findAllByLang($lang);
         foreach($list as $news){
-            $url = jUrl::getFull('news~default:article', array('newsid'=>$news->url, 'lang'=>$lang));
+            $url = jUrl::getFull('news~default:article', array('newsid'=>$news->slugurl, 'lang'=>$lang));
             $item = $rep->createItem($news->title,$url, $news->date_create);
             $item->published = $news->date_create;
             $item->authorName = $news->author;

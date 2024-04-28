@@ -25,4 +25,5 @@ jApp::declareModulesDir(array(
                     ));
 
 jApp::declareModule(__DIR__.'/../news');
+jApp::declareModule(__DIR__.'/../news_admin');
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form xmlns="http://jelix.org/ns/forms/1.1">
+
+
+	<input ref="title" required="true" maxlength="255">
+		<label locale="news_admin~news.form.title" />
+	</input>
+
+	<input ref="slugurl" required="true" maxlength="255">
+		<label locale="news_admin~news.form.slugurl" />
+	</input>
+
+	<datetime ref="date_create" defaultvalue="now" required="true">
+		<label locale="news_admin~news.form.date_create" />
+		<alert type="invalid" locale="news_admin~news.form.date_create.invalid" />
+	</datetime>
+
+
+	<wikieditor ref="abstract" required="true">
+		<label locale="news_admin~news.form.summary" />
+	</wikieditor>
+
+	<wikieditor ref="content" required="true">
+		<label locale="news_admin~news.form.content" />
+	</wikieditor>
+
+	<menulist ref="lang" required="true">
+		<label locale="news_admin~news.form.lang" />
+		<item value="en_US">English</item>
+		<item value="fr_FR">Français</item>
+	</menulist>
+	<input ref="author" required="true" maxlength="100">
+		<label locale="news_admin~news.form.author" />
+	</input>
+
+	<submit ref="_submit">
+		<label locale="news_admin~news.form.ok" />
+		<item value="preview" locale="news_admin~news.form.ok.preview"/>
+		<item value="save" locale="news_admin~news.form.ok.save"/>
+	</submit>
+
+</form>
