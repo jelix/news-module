@@ -14,11 +14,12 @@ class newsZone extends jZone {
     /*protected $_cacheTimeout = 60;
     protected $_useCache = true;*/
 
-    protected function _prepareTpl(){
-        $dao = jDao::get('news');
-        $news = $dao->getByUrlId($this->param('urlid'));
+    protected function _prepareTpl()
+    {
+        $dao = jDao::get('news~news');
+        $news = $dao->getBySlug($this->param('slug'));
         if (!$news) {
-            jLog::log('News inconnu:'.$this->param('urlid'));
+            jLog::log('News inconnu:'.$this->param('slug'));
         }
         $this->_tpl->assign('news',$news);
     }

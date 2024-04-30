@@ -16,7 +16,7 @@
 	</datetime>
 
 
-	<htmleditor ref="abstract" required="true">
+	<htmleditor ref="abstract">
 		<label locale="news_admin~news.form.summary" />
 	</htmleditor>
 

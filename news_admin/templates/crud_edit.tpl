@@ -5,21 +5,27 @@
 {/if}
 
 {form $form, $submitAction, array('id'=>$id)}
-<table class="jforms-table">
-<tr><th scope="row">{ctrl_label 'title'}</th><td width="80%">{ctrl_control 'title', array('size'=>40)}</td></tr>
-    <tr><th scope="row">{ctrl_label 'slugurl'}</th><td>{ctrl_control 'slugurl'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'date_create'}</th><td>{ctrl_control 'date_create'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'abstract'}</th><td>{ctrl_control 'abstract'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'content'}</th><td>{ctrl_control 'content'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'lang'}</th><td>{ctrl_control 'lang'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'author'}</th><td>{ctrl_control 'author'}</td></tr>
-</table>
-<div class="jforms-submit-buttons">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">{ctrl_label 'title'}
+                <div class="controls">{ctrl_control 'title'}</div></div>
+            <div class="form-group">{ctrl_label 'slugurl'}
+                <div class="controls">{ctrl_control 'slugurl'}</div></div>
+            <div class="form-group">{ctrl_label 'date_create'}
+                <div class="controls">{ctrl_control 'date_create'}</div></div>
+            <div class="form-group">{ctrl_label 'abstract'}
+                <div class="controls">{ctrl_control 'abstract'}</div></div>
+            <div class="form-group">{ctrl_label 'content'}
+                <div class="controls">{ctrl_control 'content'}</div></div>
+            <div class="form-group">{ctrl_label 'lang'}
+                <div class="controls">{ctrl_control 'lang'}</div></div>
+            <div class="form-group">{ctrl_label 'author'}
+                <div class="controls">{ctrl_control 'author'}</div></div>
+        </div>
+    </div>
+
+    <div class="jforms-submit-buttons form-actions card-footer">
     {formsubmit}
-</div>
+        <a href="{jurl $listAction}" class="btn btn-secondary">{@jelix~ui.buttons.cancel@}</a>
+    </div>
 {/form}
-
-
-
-
-<p><a href="{jurl $listAction}" class="crud-link">{@jelix~crud.link.return.to.list@}</a>.</p>

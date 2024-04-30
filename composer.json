@@ -16,7 +16,7 @@
         "jelix/wikirenderer-plugin": "~1.7.3"
     },
     "conflict": {
-       "jelix/jelix": "<1.7.0"
+       "jelix/jelix": "<1.8.0"
     },
     "minimum-stability": "stable",
     "extra" : {

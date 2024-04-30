@@ -1,4 +1,5 @@
-This is a module for Jelix 1.7+, that shows a list of news
+This is a module for Jelix 1.8+, that shows a list of news. A module for an admin interface
+is also provided to manage news. 
 
 
 Installation
@@ -18,6 +19,7 @@ Launch the configurator for your application to enabling the module.
 
 ```bash
 php yourapp/dev.php module:configure news
+php yourapp/dev.php module:configure news_admin
 ```
 
 And then launch the installer to activate the module
@@ -36,6 +38,7 @@ Then execute on the command line, this command to configure the module:
 
 ```bash
 php yourapp/install/configurator.php news
+php yourapp/install/configurator.php news_admin
 ```
 
 And then launch the installer to activate the module

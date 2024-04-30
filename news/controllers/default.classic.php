@@ -49,7 +49,7 @@ class defaultCtrl extends jController {
         $rep = $this->getResponse('html');
         $rep->addMetaDescription(jLocale::get('news.description'));
         $rep->body->assign('page_title',jLocale::get('news.page_title'));
-        $rep->body->assignZone('MAIN','news~news', array('urlid'=>$url,'lang'=>$lang));
+        $rep->body->assignZone('MAIN','news~news', array('slug'=>$url,'lang'=>$lang));
         $rep->body->assign('heading','news');
         $rep->body->assign('link_lang', $link_lang);
         return $rep;

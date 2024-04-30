@@ -1,21 +1,32 @@
 <h1>{@news_admin~news.details.title@}</h1>
 
 {formdata $form}
-<table class="jforms-table">
-    <tr><th scope="row">{ctrl_label 'title'}</th><td>{ctrl_value 'title'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'slugurl'}</th><td>{ctrl_value 'slugurl'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'date_create'}</th><td>{ctrl_value 'date_create'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'abstract'}</th><td>{ctrl_value 'abstract'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'content'}</th><td>{ctrl_value 'content'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'lang'}</th><td>{ctrl_value 'lang'}</td></tr>
-    <tr><th scope="row">{ctrl_label 'author'}</th><td>{ctrl_value 'author'}</td></tr>
-</table>
-{/formdata}
+<div class="card">
+    <div class="card-body form-horizontal jforms-view">
+        <div class="form-group">{ctrl_label 'title'}
+            <div class="controls col-sm-10">{ctrl_value 'title'}</div></div>
+        <div class="form-group">{ctrl_label 'slugurl'}
+            <div class="controls col-sm-10">{ctrl_value 'slugurl'}</div></div>
+        <div class="form-group">{ctrl_label 'date_create'}
+            <div class="controls col-sm-10">{ctrl_value 'date_create'}</div></div>
+        <div class="form-group">{ctrl_label 'abstract'}
+            <div class="controls col-sm-10">{ctrl_value 'abstract'}</div></div>
+        <div class="form-group">{ctrl_label 'content'}
+            <div class="controls col-sm-10">{ctrl_value 'content'}</div></div>
+        <div class="form-group">{ctrl_label 'lang'}
+            <div class="controls col-sm-10">{ctrl_value 'lang'}</div></div>
+        <div class="form-group">{ctrl_label 'author'}
+            <div class="controls col-sm-10">{ctrl_value 'author'}</div></div>
+    </div>
 
-<ul class="crud-links-list">
-{ifacl2 'news.manage'}
-    <li><a href="{jurl $editAction, array('id'=>$id)}" class="crud-link">{@jelix~crud.link.edit.record@}</a></li>
-    <li><a href="{jurl $deleteAction, array('id'=>$id)}" class="crud-link" onclick="return confirm('{@jelix~crud.confirm.deletion@}')">{@jelix~crud.link.delete.record@}</a></li>
-{/ifacl2}
-    <li><a href="{jurl $listAction}" class="crud-link">{@jelix~crud.link.return.to.list@}</a></li>
-</ul>
+    <div class="card-footer">
+
+    {ifacl2 'news.manage'}
+        <a href="{jurl $editAction, array('id'=>$id)}" class="btn btn-primary">{@jelix~crud.link.edit.record@}</a>
+        <a href="{jurl $deleteAction, array('id'=>$id)}" class="btn btn-danger" onclick="return confirm('{@jelix~crud.confirm.deletion@}')">{@jelix~crud.link.delete.record@}</a>
+    {/ifacl2}
+        <a href="{jurl $listAction}" class="btn btn-secondary">{@jelix~crud.link.return.to.list@}</a>
+
+    </div>
+</div>
+{/formdata}

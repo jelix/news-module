@@ -32,10 +32,18 @@
                 <orderitem property="date_create" way="DESC" />
             </order>
         </method>
-        <method name="getByUrlId" type="selectfirst">
+        <method name="getBySlug" type="selectfirst">
             <parameter name="url" />
             <conditions>
                 <eq property="slugurl" expr="$url" />
+            </conditions>
+        </method>
+        <method name="getBySlugExceptId" type="selectfirst">
+            <parameter name="url" />
+            <parameter name="ignoredId" />
+            <conditions>
+                <eq property="slugurl" expr="$url" />
+                <neq property="news_id" expr="$ignoredId" />
             </conditions>
         </method>
      </factory>

@@ -1,6 +1,6 @@
 <h1>{@news_admin~news.list.title@}</h1>
 
-<table class="records-list">
+<table class="table table-bordered table-hover">
 <thead>
 <tr>
     {foreach $properties as $propname}
@@ -20,7 +20,7 @@
     <td>{$record->$propname|eschtml}</td>
     {/foreach}
     <td>
-        <a href="{jurl $viewAction,array('id'=>$record->$primarykey)}">{@jelix~crud.link.view.record@}</a>
+        <a class="btn btn-block btn-info" href="{jurl $viewAction,array('id'=>$record->$primarykey)}">{@jelix~crud.link.view.record@}</a>
     </td>
 </tr>
 {/foreach}
@@ -31,6 +31,6 @@
 {/if}
 
 {ifacl2 'news.manage'}
-<p><a href="{jurl $createAction}" class="crud-link">{@news_admin~news.list.add.new@}</a>.</p>
+<p><a href="{jurl $createAction}" class="btn btn-primary">{@news_admin~news.list.add.new@}</a></p>
 {/ifacl2}
 
