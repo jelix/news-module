@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="http://jelix.org/ns/module/1.0">
     <info id="news_admin@jelix.org" name="news_admin" createdate="2024-04-28">
-        <version>1.0.0-pre</version>
+        <version date="2024-04-30">2.0.0-rc.1</version>
         <label lang="en_US">Management of news</label>
         <description lang="en_US" />
         <license>MIT</license>
@@ -10,7 +10,7 @@
     </info>
     <dependencies>
         <jelix minversion="1.8.0" maxversion="1.8.*"/>
-        <module name="news" minversion="2.0.0-pre"/>
+        <module name="news"/>
         <module name="jacl2db" />
     </dependencies>
 </module>
