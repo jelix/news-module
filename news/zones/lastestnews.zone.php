@@ -4,7 +4,7 @@
  * @package		www.jelix.org
  * @subpackage   news
  * @author    Laurent Jouanneau
- * @copyright 2007-2012 Laurent Jouanneau
+ * @copyright 2007-2024 Laurent Jouanneau
  * @link     http://jelix.org
  * @licence  http://www.gnu.org/licenses/gpl.html GNU General Public Licence, see LICENCE file
  */
@@ -21,7 +21,7 @@ class lastestNewsZone extends jZone {
     protected function _prepareTpl(){
 
         $dao = jDao::get('news');
-        $this->_tpl->assign('news',$dao->getFirstByLang($this->getParam('lang','en_EN')));
+        $this->_tpl->assign('news',$dao->getFirstByLang($this->param('lang','en_US')));
     }
 }
 

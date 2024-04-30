@@ -5,9 +5,9 @@ title="{@news~news.permanent.link@}"># {$news->date_create|jdatetime}</a>, {$new
 
 
 {if $news->abstract ==''}
-<div class="news-content">{$news->content|wiki:"news_to_xhtml"}</div>
+<div class="news-content">{$news->content|wiki}</div>
 {else}
-<div class="news-content">{$news->abstract|wiki:"news_to_xhtml"}</div>
+<div class="news-content">{$news->abstract|wiki}</div>
 <p><a href="{jurl 'news~default:article',array('newsid'=>$news->url,'lang'=>$lang)}">{@news~news.full.article.label@}</a></p>
 {/if}
 

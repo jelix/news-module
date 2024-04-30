@@ -1,7 +1,7 @@
 <?php
 /**
  * @author    Laurent Jouanneau
- * @copyright 2007-2019 Laurent Jouanneau
+ * @copyright 2007-2024 Laurent Jouanneau
  * @link     http://jelix.org
  * @licence  MIT
  */
@@ -13,7 +13,7 @@ class defaultCtrl extends jController {
     function index() {
         $lang = jApp::config()->locale;
         if ($lang == 'fr_FR') {
-            $link_lang = array('news~default:index', array('lang' => 'en_EN'));
+            $link_lang = array('news~default:index', array('lang' => 'en_US'));
         } else {
             $link_lang = array('news~default:index', array('lang' => 'fr_FR'));
         }
@@ -42,7 +42,7 @@ class defaultCtrl extends jController {
         }
 
         if ($lang == 'fr_FR')
-            $link_lang = array('news~default:index',array('lang'=>'en_EN'));
+            $link_lang = array('news~default:index',array('lang'=>'en_US'));
         else
             $link_lang = array('news~default:index',array('lang'=>'fr_FR'));
 
@@ -58,7 +58,7 @@ class defaultCtrl extends jController {
     function rss(){
         $lang = jApp::config()->locale;
         if ($lang == 'fr_FR') {
-            $link_param = array('lang' => 'en_EN');
+            $link_param = array('lang' => 'en_US');
         }
         else {
             $link_param = array('lang' => 'fr_FR');

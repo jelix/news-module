@@ -7,7 +7,7 @@
 {if $news}
     <h3>{$news->title}</h3>
     <div class="news-infos">{$news->date_create|jdatetime}, {$news->author|escxml}.</div>
-    <div class="news-content">{$news->content|wiki:"news_to_xhtml"}</div>
+    <div class="news-content">{$news->content|wiki}</div>
 {else}
     <p>{@news~news.unknown@}</p>
 {/if}
