@@ -26,8 +26,7 @@
 
 	<menulist ref="lang" required="true">
 		<label locale="news_admin~news.form.lang" />
-		<item value="en_US">English</item>
-		<item value="fr_FR">Français</item>
+		<datasource class="news_admin~newsLocalesDatasource" />
 	</menulist>
 	<input ref="author" required="true" maxlength="100">
 		<label locale="news_admin~news.form.author" />

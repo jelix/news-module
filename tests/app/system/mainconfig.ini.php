@@ -4,7 +4,7 @@
 locale=fr_FR
 charset=UTF-8
 
-availableLocales=fr_FR
+availableLocales=fr_FR,en_US
 
 ; see http://www.php.net/manual/en/timezones.php for supported values
 timeZone="Europe/Paris"
