@@ -19,7 +19,7 @@ class news_adminModuleConfigurator extends \Jelix\Installer\Module\Configurator
 
     public function declareUrls(EntryPointUrlModifier $registerOnEntryPoint)
     {
-        $registerOnEntryPoint->havingName(
+        $registerOnEntryPoint->havingNameIfExists(
             'admin',
             array(
                 new ModuleUrl('/newsadmin')
