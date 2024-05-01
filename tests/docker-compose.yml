@@ -33,6 +33,7 @@ services:
       POSTGRES_USER: usertest
     volumes:
       - pg_data:/var/lib/postgresql
+      - "../:/app/"
     ports:
       - "${TESTAPP_PGSQL_PORT}:5432"
 volumes:

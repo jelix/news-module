@@ -28,6 +28,9 @@ case $COMMAND in
     pgsql)
        docker compose exec -it --user postgres -e PGPASSWORD="test1234" pgsql psql --username=usertest newsmodule
        ;;
+    pgsql-shell)
+       docker compose exec -it --user postgres pgsql /bin/bash -l
+       ;;
     shell)
        docker compose exec -it --user userphp php  /bin/bash -l;;
     shellroot)
