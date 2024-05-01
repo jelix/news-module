@@ -17,6 +17,12 @@ title="{@news~news.permanent.link@}"># {$news->date_create|jdatetime}</a>
 {/if}
 </article>
 {/foreach}
+
+    {if $recordCount > $pageSize}
+        <div class="record-pages-list">{pagelinks "news~default:index" , array('lang'=>$lang),  $recordCount, $page, $pageSize, 'o', array('area-size'=>10)}</div>
+    {/if}
+
+
 {else}
 <p>No news.</p>
 {/if}

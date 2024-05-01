@@ -10,7 +10,8 @@ class defaultCtrl extends jController {
     /**
      *
      */
-    function index() {
+    function index()
+    {
         $lang = jApp::config()->locale;
         if ($lang == 'fr_FR') {
             $link_lang = array('news~default:index', array('lang' => 'en_US'));
@@ -18,10 +19,12 @@ class defaultCtrl extends jController {
             $link_lang = array('news~default:index', array('lang' => 'fr_FR'));
         }
 
+        $offset = $this->intParam('o', 0, true);
+
         $rep = $this->getResponse('html');
         $rep->addMetaDescription(jLocale::get('news.description'));
         $rep->body->assign('page_title', jLocale::get('news.page_title'));
-        $rep->body->assignZone('MAIN','news~listnews', array('lang'=>$lang));
+        $rep->body->assignZone('MAIN','news~listnews', array('lang'=>$lang, 'offset' => $offset));
         $rep->body->assign('heading','news');
         $rep->body->assign('link_lang', $link_lang);
 
@@ -80,7 +83,7 @@ class defaultCtrl extends jController {
         $rep->infos->published = $first->date_create;
         $rep->infos->ttl=60;
 
-        $list = $newsdao->findAllByLang($lang);
+        $list = $newsdao->findByLang($lang, 0, 15);
         foreach($list as $news){
             $url = jUrl::getFull('news~default:article', array('newsid'=>$news->slugurl, 'lang'=>$lang));
             $item = $rep->createItem($news->title,$url, $news->date_create);

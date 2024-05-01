@@ -27,7 +27,7 @@
 </tbody>
 </table>
 {if $recordCount > $listPageSize}
-<p class="record-pages-list">{@jelix~crud.title.pages@} : {pagelinks $listAction, array(),  $recordCount, $page, $listPageSize, $offsetParameterName }</p>
+    <nav>{pagelinksadminui $listAction, array(),  $recordCount, $page, $listPageSize, $offsetParameterName }</nav>
 {/if}
 
 {ifacl2 'news.manage'}

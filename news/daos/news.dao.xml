@@ -32,6 +32,24 @@
                 <orderitem property="date_create" way="DESC" />
             </order>
         </method>
+        <method name="findByLang" type="select">
+            <parameter name="lang" />
+            <parameter name="offset" default="0" />
+            <parameter name="count" default="10"/>
+            <conditions logic="and">
+                <eq property="lang" expr="$lang" />
+            </conditions>
+            <limit offset="$offset" count="$count"/>
+            <order>
+                <orderitem property="date_create" way="DESC" />
+            </order>
+        </method>
+        <method name="countByLang" type="count">
+            <parameter name="lang" />
+            <conditions logic="and">
+                <eq property="lang" expr="$lang" />
+            </conditions>
+        </method>
         <method name="getBySlug" type="selectfirst">
             <parameter name="url" />
             <conditions>

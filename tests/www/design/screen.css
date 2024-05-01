@@ -115,4 +115,12 @@ pre {
    border-radius:0px 0px 15px 15px;
 }
 
+.record-pages-list {
+   text-align:center;
+   margin-top : 3em;
+}
 
+.pagelinks li { display:inline; border:1px solid gray; padding:4px; color:black; }
+.pagelinks li.pagelinks-disabled { color: gray;}
+.pagelinks li.pagelinks-current { font-weight:bold;}
+.pagelinks li a:hover, .pagelinks li:hover { background-color:#eee; }
