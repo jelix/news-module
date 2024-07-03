@@ -9,6 +9,7 @@ CREATE TABLE `news` (
   `date_create` datetime NOT NULL,
   `lang` varchar(5) NOT NULL,
   `author` varchar(100) default NULL,
+  `online_status` INT DEFAULT 0
   PRIMARY KEY  (`news_id`)
   PRIMARY KEY  (`news_id`)
 ) ENGINE=InnoDb DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

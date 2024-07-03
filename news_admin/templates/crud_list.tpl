@@ -22,7 +22,15 @@
 {foreach $list as $record}
 <tr class="{cycle array('odd','even')}">
     {foreach $properties as $propname}
-    <td>{$record->$propname|eschtml}</td>
+        {if $propname == 'online_status'}
+            <td>{if $record->online_status}
+                    {@news_admin~news.form.online_status.online@}
+                {else}
+                   {@news_admin~news.form.online_status.offline@}
+                {/if}</td>
+        {else}
+            <td>{$record->$propname|eschtml}</td>
+        {/if}
     {/foreach}
     <td>
         <a class="btn btn-block btn-info" href="{jurl $viewAction,array('id'=>$record->$primarykey)}">{@jelix~crud.link.view.record@}</a>

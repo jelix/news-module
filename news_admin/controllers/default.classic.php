@@ -37,7 +37,7 @@ class defaultCtrl extends jControllerDaoCrud {
      * this property is only usefull when you use the default "list" template
      * @var array
      */
-    protected $propertiesForList = array( 'title', 'lang', 'slugurl', 'date_create');
+    protected $propertiesForList = array( 'title', 'lang', 'slugurl', 'date_create', 'online_status');
 
     /**
      * list of properties which serve to order the record list.
@@ -49,7 +49,8 @@ class defaultCtrl extends jControllerDaoCrud {
         'title' =>'',
         'lang' => '',
         'slugurl' => '',
-        'date_create' =>'desc'
+        'date_create' =>'desc',
+        'online_status' =>'',
     );
 
     protected $listTemplate = 'news_admin~crud_list';

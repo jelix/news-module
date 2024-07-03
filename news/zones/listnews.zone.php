@@ -23,11 +23,10 @@ class listNewsZone extends jZone {
         $offset =  $this->param('offset', 0);
         $lang = $this->param('lang','en_US');
 
-        $this->_tpl->assign('listnews', $dao->findByLang($lang, $offset, $pageSize));
+        $this->_tpl->assign('listnews', $dao->findOnlineByLang($lang, $offset, $pageSize));
         $this->_tpl->assign('page', $offset > 0 ? $offset : null);
         $this->_tpl->assign('pageSize', $pageSize);
         $this->_tpl->assign('recordCount', $dao->countByLang($lang));
     }
 }
 
-?>

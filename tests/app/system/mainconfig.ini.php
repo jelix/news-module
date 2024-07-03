@@ -34,6 +34,12 @@ jacl2db_admin.enabled=on
 
 news_admin.enabled=on
 [coordplugins]
+autolocale=1
+
+[autolocale]
+enableUrlDetection= on
+urlParamNameLanguage=lang
+useDefaultLanguageBrowser=on
 
 [responses]
 html=testResponse

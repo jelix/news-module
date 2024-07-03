@@ -7,8 +7,6 @@
  * @licence  MIT
  */
 
-
-
 class lastestNewsZone extends jZone {
 
     protected $_tplname='lastestnews';
@@ -16,11 +14,10 @@ class lastestNewsZone extends jZone {
     protected $_cacheTimeout = 60;
     protected $_useCache = true;
 
-    protected function _prepareTpl(){
-
+    protected function _prepareTpl()
+    {
         $dao = jDao::get('news');
-        $this->_tpl->assign('news',$dao->getFirstByLang($this->param('lang','en_US')));
+        $this->_tpl->assign('news',$dao->getFirstOnlineByLang($this->param('lang','en_US')));
     }
 }
 
-?>

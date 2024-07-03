@@ -38,10 +38,15 @@ class defaultCtrl extends jController {
         $lang = jApp::config()->locale;
 
         $url = $this->param('newsid');
-        if($url == null){
+        if ($url == null) {
             $rep = new jResponseRedirect();
             $rep->action = 'news~index';
             return $rep;
+        }
+        $dao = jDao::get('news');
+        $news = $dao->getBySlugAndOnline($url);
+        if (!$news) {
+            throw new jHttp404NotFoundException("Article not found");
         }
 
         if ($lang == 'fr_FR')
@@ -52,7 +57,8 @@ class defaultCtrl extends jController {
         $rep = $this->getResponse('html');
         $rep->addMetaDescription(jLocale::get('news.description'));
         $rep->body->assign('page_title',jLocale::get('news.page_title'));
-        $rep->body->assignZone('MAIN','news~news', array('slug'=>$url,'lang'=>$lang));
+        $rep->body->assignZone('MAIN','news~news', array(
+            'news'=>$news, 'slug'=>$url,'lang'=>$lang));
         $rep->body->assign('heading','news');
         $rep->body->assign('link_lang', $link_lang);
         return $rep;
@@ -77,13 +83,13 @@ class defaultCtrl extends jController {
         }
 
         $newsdao = jDao::get('news');
-        $first = $newsdao->getFirstByLang($lang);
+        $first = $newsdao->getFirstOnlineByLang($lang);
 
         $rep->infos->updated = $first->date_create;
         $rep->infos->published = $first->date_create;
         $rep->infos->ttl=60;
 
-        $list = $newsdao->findByLang($lang, 0, 15);
+        $list = $newsdao->findOnlineByLang($lang, 0, 15);
         foreach($list as $news){
             $url = jUrl::getFull('news~default:article', array('newsid'=>$news->slugurl, 'lang'=>$lang));
             $item = $rep->createItem($news->title,$url, $news->date_create);

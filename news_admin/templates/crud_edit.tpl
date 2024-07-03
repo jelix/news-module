@@ -21,6 +21,8 @@
                 <div class="controls">{ctrl_control 'lang'}</div></div>
             <div class="form-group">{ctrl_label 'author'}
                 <div class="controls">{ctrl_control 'author'}</div></div>
+            <div class="form-group">{ctrl_label 'online_status'}
+                <div class="controls">{ctrl_control 'online_status'}</div></div>
         </div>
     </div>
 

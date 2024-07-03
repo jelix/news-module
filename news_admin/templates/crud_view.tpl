@@ -17,6 +17,8 @@
             <div class="controls col-sm-10">{ctrl_value 'lang'}</div></div>
         <div class="form-group">{ctrl_label 'author'}
             <div class="controls col-sm-10">{ctrl_value 'author'}</div></div>
+        <div class="form-group">{ctrl_label 'online_status'}
+            <div class="controls col-sm-10">{ctrl_value 'online_status'}</div></div>
     </div>
 
     <div class="card-footer">

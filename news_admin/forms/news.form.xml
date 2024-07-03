@@ -28,9 +28,16 @@
 		<label locale="news_admin~news.form.lang" />
 		<datasource class="news_admin~newsLocalesDatasource" />
 	</menulist>
+
 	<input ref="author" required="true" maxlength="100">
 		<label locale="news_admin~news.form.author" />
 	</input>
+
+	<menulist ref="online_status" required="true">
+		<label locale="news_admin~news.form.online_status" />
+		<item value="1" locale="news_admin~news.form.online_status.online"/>
+		<item value="0" locale="news_admin~news.form.online_status.offline"/>
+	</menulist>
 
 	<submit ref="_submit">
 		<label locale="news_admin~news.form.ok" />
