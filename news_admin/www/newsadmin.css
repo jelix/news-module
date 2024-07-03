@@ -1,0 +1,8 @@
+
+table.table th a.view-order.order-asc i:before {
+    content: "▲"
+
+}
+table.table th a.view-order.order-desc i:before {
+    content: "▼"
+}

@@ -45,7 +45,12 @@ class defaultCtrl extends jControllerDaoCrud {
      * keys are properties name, and values are "asc" or "desc"
      * @var array
      */
-    protected $propertiesForRecordsOrder = array('date_create'=>'desc');
+    protected $propertiesForRecordsOrder = array (
+        'title' =>'',
+        'lang' => '',
+        'slugurl' => '',
+        'date_create' =>'desc'
+    );
 
     protected $listTemplate = 'news_admin~crud_list';
     protected $editTemplate = 'news_admin~crud_edit';
@@ -143,9 +148,10 @@ class defaultCtrl extends jControllerDaoCrud {
      * @param jResponseHtml $resp the response
      * @param jtpl $tpl the template to display the record list
      */
-    /*protected function _index($resp, $tpl)
+    protected function _index($resp, $tpl)
     {
-    }*/
+        $resp->addCSSLink(jUrl::get('news_admin~www', ['file' => 'newsadmin.css']));
+    }
 
     /**
      * redefine this method if you want to do additional conditions to the index's select
