@@ -31,6 +31,11 @@ case $COMMAND in
     pgsql-restore)
        docker compose exec -it --user postgres -e PGPASSWORD="test1234" pgsql psql --username=usertest --dbname=newsmodule -f /app/tests/dump_news.sql
        ;;
+    pgsql-dump)
+       docker compose exec -it --user postgres -e PGPASSWORD="test1234" pgsql pg_dump --username=usertest --dbname=newsmodule --data-only --table=news -f /tmp/dump_news.sql
+       docker compose exec -it pgsql cp /tmp/dump_news.sql /app/tests/dump_news.sql
+       docker compose exec -it pgsql chown 1000:1000 /app/tests/dump_news.sql
+       ;;
     pgsql-shell)
        docker compose exec -it --user postgres pgsql /bin/bash -l
        ;;
